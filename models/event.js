@@ -1,61 +1,71 @@
 var mongoose = require('mongoose');
 
-var Music = mongoose.model('Music', {
-    musicId: {
+var Event = mongoose.model('Events', {
+    eventName: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicFileName: {
+    eventThumbnailId: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicName: {
+    eventTime: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicArtist: {
+    eventType: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicText: {
+    eventVenue: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicCategory: {
+    eventUrl: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicThumbnail: {
+    eventThumbnail: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicThumbnailId: {
+    eventDay: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicStreams: {
-        type: Number,
-        default: 0
+    eventMonth: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
     },
-    musicDate: {
-        type: Number,
-        default: Date.now()
+    eventStartTime: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
+    },
+    eventStopTime: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
     },
     timeStamp: {
         type: String,
@@ -65,6 +75,6 @@ var Music = mongoose.model('Music', {
     }
 });
 
-Music.createIndexes({musicName: 'text'});
+Event.createIndexes({eventName: 'text'});
 
-module.exports = {Music};
+module.exports = {Event};

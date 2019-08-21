@@ -1,61 +1,47 @@
 var mongoose = require('mongoose');
 
-var Music = mongoose.model('Music', {
-    musicId: {
+var Video = mongoose.model('Movies', {
+    videoName: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicFileName: {
+    videoThumbnailId: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicName: {
+    videoArtist: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicArtist: {
+    videoText: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicText: {
+    videoCategory: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicCategory: {
+    videoThumbnail: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
     },
-    musicThumbnail: {
+    videoUrl: {
         type: String,
         required: true,
         minlength: 1,
         trim: true
-    },
-    musicThumbnailId: {
-        type: String,
-        required: true,
-        minlength: 1,
-        trim: true
-    },
-    musicStreams: {
-        type: Number,
-        default: 0
-    },
-    musicDate: {
-        type: Number,
-        default: Date.now()
     },
     timeStamp: {
         type: String,
@@ -65,6 +51,6 @@ var Music = mongoose.model('Music', {
     }
 });
 
-Music.createIndexes({musicName: 'text'});
+Video.createIndexes({videoName: 'text'});
 
-module.exports = {Music};
+module.exports = {Video};

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/event-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:18 GMT -->
+<head>
+<meta charset="utf-8">
+<title>BlazersNG</title>
+
+<!--=================================
+Meta tags
+=================================-->
+<meta name="description" content="">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+
+<!--=================================
+Style Sheets
+=================================-->
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+<link rel="stylesheet" type="text/css" href="/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.vegas.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<!--<link rel="stylesheet" type="text/css" href="/css/blue.css">
+<link rel="stylesheet" type="text/css" href="/css/orange.css">
+<link rel="stylesheet" type="text/css" href="/css/red.css">
+<link rel="stylesheet" type="text/css" href="/css/green.css">
+<link rel="stylesheet" type="text/css" href="/css/purple.css">-->
+
+<script async  src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script defer  src="/js/jquery.js"></script>
+</head>
+<body>
+
+
+<!--=================================
+	Header
+	=================================-->
+<header>
+  <div class="social-links">
+    <div class="container">
+      <ul class="social">
+        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+        <li ><a href="#"><span class="fa fa-twitter"></span></a></li>
+        <li ><a href="#"><span class="fa fa-pinterest"></span></a></li>
+        <li ><a href="#"><span class="fa fa-linkedin"></span></a></li>
+        <li ><a href="#"><span class="fa fa-flickr"></span></a></li>
+        <li ><a href="#"><span class="fa fa-youtube"></span></a></li>
+        <li ><a href="#"><span class="fa fa-instagram"></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="navbar yamm navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle fa fa-navicon"></button>
+        <a class="navbar-brand" href="index.html">
+            <img src="/img/basic/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="nav_wrapper">
+        <div class="nav_scroll">
+          <div class="nav-search">
+            <form>
+              <input type="text" placeholder="Search" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          
+           <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/event/">Events</a></li>
+              <li><a href="/music/">Songs</a></li>
+              <li><a href="/client/">Clients</a></li>
+              <li><a href="/videos/">Videos</a></li>
+              <li><a href="/news/1">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse --> 
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--=================================
+Vegas Slider Images
+=================================-->
+
+<ul class="vegas-slides hidden">
+  <li><img data-fade='2000' src="/img/BG/bg1.jpg" alt="" /></li>
+  <li><img data-fade='2000' src="/img/BG/bg2.jpg" alt="" /></li>
+  <li><img data-fade='2000' src="/img/BG/bg3.jpg" alt="" /></li>
+  <li><img data-fade='2000' src="/img/BG/bg4.jpg" alt="" /></li>
+</ul>
+
+<!--=================================
+JPlayer (Audio Player)
+=================================-->
+
+<section id="audio-player">
+  <div class="container">
+    <div class="rock-player">
+      <div class="playListTrigger">
+      	<a href="#"><i class="fa fa-list"></i></a>
+      </div><!--triggerPlayList in responsive-->
+      <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div id="player-instance" class="jp-jplayer"></div>
+              <div class="controls">
+                <div class="jp-prev"></div>
+                <div  class="play-pause jp-play"></div>
+                <div  class="play-pause jp-pause" style="display:none"></div>
+                <div class="jp-next"></div>
+              </div>
+              <!--controls--> 
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+              <div class="player-status">
+                <h5 class="audio-title">Maroon 5 - Moves Like Jagger ft. Christina Aguilera</h5>
+                <div class="audio-timer"><span class="current-time jp-current-time">01:02</span> / <span class="total-time jp-duration">4:05</span></div>
+                <div class="audio-progress">
+                  <div class="jp-seek-bar">
+                    <div class="audio-play-bar jp-play-bar" style="width:20%;"></div>
+                  </div>
+                  <!--jp-seek-bar--> 
+                </div>
+                <!--audio-progress--> 
+              </div>
+              <!--player-status--> 
+            </div>
+            <!--column--> 
+          </div>
+          <!--inner-row--> 
+        </div>
+        <!--column-->
+        
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+          <div class="audio-list">
+            <div class="audio-list-icon"></div>
+            <div class="jp-playlist"> 
+              <!--Add Songs In mp3 formate here-->
+              <ul class="hidden playlist-files">
+                <li data-title="Maroon 5 - Moves Like Jagger" 
+                                    	data-artist="ft. Christina" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="Coldplay - Princess Of China" 
+                                    	data-artist="ft. Rihanna" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="Lorem Ipsum" 
+                                    	data-artist="ft. Rocker" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="New Fish!!!" 
+                                    	data-artist="ft. Jailer" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="I wanna grow" 
+                                    	data-artist="ft. MeDon" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="do be do" 
+                                    	data-artist="ft. scoby" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="We aint smart" 
+                                    	data-artist="ft. SomeFool" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+              </ul>
+              <!--Playlist ends-->
+              <h5>Audio Playlist</h5>
+              <div class="audio-track">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--row--> 
+    </div>
+  </div>
+</section>
+
+
+<div id="ajaxArea">
+    <div class="pageContentArea">
+      <!--=================================
+      bread crums
+      =================================-->
+        <section class="breadcrumb">
+             <div class="container">
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <h1>{{result.newsTitle}}</h1>
+                          {{!-- <h5>list of upcomming and previous events</h5> --}}
+                      </div>
+                      
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <ul>
+                              <li><a href="">Home</a></li>
+                              <li><a href="/news">latest news</a></li>
+                          </ul>
+                      </div>
+                  </div>
+             </div>
+        </section>
+      <!--=================================
+      videos
+      =================================-->
+      
+      <section id="latest-events">
+          <div class="container">
+              <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-5">
+                          <div class="event-feed latest">
+                              <img src="/news/img/{{result.newsThumbnail}}" alt="">
+                              <div class="date">
+                                  <span class="day"></span>
+                                  <span class="month"></span>
+                              </div>
+                              <h5>{{result.eventName}}</h5>
+                              <ul>
+                                  <li><b class=" fa fa-play"></b>{{result.newsView}} views</li>
+                                  <li><b class=" fa fa-clock-o"></b> published {{result.momentTime}}</li>
+                                  
+                              </ul>
+                              {{!-- <a class="btn" href="{{result.eventUrl}}">Buy tickets</a> --}}
+                          </div><!--\\event-feed latest-->
+                          
+                          {{!-- <h1>event location</h1>
+                          
+                          <div id="google-map1" class="xv-gmap event-map" data-theme="pink" data-address="kansas city" data-zoomlvl="13" data-maptype="HYBRID"></div> --}}
+                          
+                      </div><!--//col-->
+                      
+                      <div class="col-lg-8 col-md-8 col-sm-7">
+                          <div class="event-info">
+                              <h3>News in detail</h3>
+                              <p>{{result.newsMessage}}</p>
+                              {{!-- <div class="video-feed">
+                                  <img src="/img/videos/1.jpg" alt=""/>
+                                  <a href="video-detail.html"><span class="fa fa-play"></span></a>
+                                  <h6>1 week ago</h6>
+                              </div><!--\\video-feed-->
+                              
+                               <div class="video-feed">
+                                  <img src="/img/videos/1.jpg" alt=""/>
+                                  <a href="video-detail.html"><span class="fa fa-play"></span></a>
+                                  <h6>1 week ago</h6>
+                              </div><!--\\video-feed--> --}}
+                          </div><!--//event-info-->
+                      </div><!--//col-->
+              </div><!--row-->
+          </div><!--//container-->  
+      </section>
+	</div><!--pageContent-->
+</div><!--ajaxwrap-->    
+<!--=================================
+	Latest blog
+	=================================-->
+{{!-- <section id="latest-blog">
+  <div class="container">
+    <div class="row">
+      <h1>latest from the blog</h1>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <article class="blog-post"> <img src="/img/blog/1.jpg" alt=""/>
+          <div class="hover"> <a href="blog-detail.html">
+            <h2>Miguel to Muse: the week in music</h2>
+            <p>'I use uncertainty as motivation and hopefully Rob uses it as motivation as...</p>
+            <ul>
+              <li>Admin</li>
+              <li>5 hours ago</li>
+              <li>2 Comments</li>
+            </ul>
+            </a> </div>
+        </article>
+      </div>
+      <!--\\blog-post-->
+      
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <article class="blog-post"> <img src="/img/blog/2.jpg" alt=""/>
+          <div class="hover"> <a href="blog-detail.html">
+            <h2>Kenny Chesney kicks off Austin’s country music</h2>
+            <p>'I use uncertainty as motivation and hopefully Rob uses it as motivation as...</p>
+            <ul>
+              <li>Admin</li>
+              <li>5 hours ago</li>
+              <li>2 Comments</li>
+            </ul>
+            </a> </div>
+        </article>
+      </div>
+      <!--\\blog-post-->
+      
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <article class="blog-post"> <img src="/img/blog/3.jpg" alt=""/>
+          <div class="hover"> <a href="blog-detail.html">
+            <h2>CHRISTIAN REY - LIVE MUSIC</h2>
+            <p>'I use uncertainty as motivation and hopefully Rob uses it as motivation as...</p>
+            <ul>
+              <li>Admin</li>
+              <li>5 hours ago</li>
+              <li>2 Comments</li>
+            </ul>
+            </a> </div>
+        </article>
+      </div>
+      <!--\\blog-post--> 
+      
+    </div>
+  </div>
+</section> --}}
+
+<!--=================================
+	Footer
+	=================================-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-sitemap"></span>browse around</h4>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <ul class="sitemap">
+              <li><a href="/">HOME</a></li>
+              <li><a href="/music/">Songs</a></li>
+              <li><a href="/videos/">Videos</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <ul class="sitemap">
+             <li><a href="/event/">Events</a></li>
+              <li><a href="/client/">Clients</a></li>
+              <li><a href="/news/1">News</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--\\column-->
+      
+      {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-twitter"></span>Latest Tweet</h4>
+        <div class="latest-tweet" data-username="envato" data-limit="2"></div>
+      </div> --}}
+      <!--\\column-->
+      
+      {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-flickr"></span>Flicker Feed</h4>
+        <ul id="flicker-feed" data-limit="6" data-userID="52617155@N08"></ul>
+      </div> --}}
+      <!--\\column-->
+      
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-envelope"></span>newsletter signup</h4>
+        <form id="newsletter">
+          <input placeholder="Enter your email address here" />
+          <button class="submit-btn">submit</button>
+        </form>
+      </div>
+      <!--\\column--> 
+      
+    </div>
+    <!--\\row--> 
+  </div>
+  <!--\\container--> 
+</footer>
+
+<!--=================================
+Script Source
+=================================--> 
+
+<script defer  src="/js/bootstrap.min.js"></script>
+<script defer  src="/js/jquery.easing-1.3.pack.js"></script>
+<script defer  src="/js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script defer  src="/js/jquery.mousewheel.min.js"></script> 
+<script defer  src="/js/jflickrfeed.min.js"></script> 
+<script defer  src="/js/jquery.flexslider-min.js"></script> 
+<script defer  src="/js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+<script defer  src="/js/tweetie.min.js"></script> 
+<script defer  src="/js/jquery.prettyPhoto.js"></script> 
+<script defer  src="/jPlayer/jquery.jplayer.min.js"></script> 
+<script defer  src="/jPlayer/add-on/jplayer.playlist.min.js"></script> 
+<script defer  src="/js/jquery.vegas.min.js"></script> 
+<script defer  src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+<script defer  src="/js/jquery.calendar-widget.js"></script> 
+<script defer  src="/js/isotope.js"></script>
+<script defer  src="/js/main.js"></script>   
+
+<script>/*Place Your Google Analytics code here*/</script>
+
+</body>
+
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/event-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:18 GMT -->
+</html>
