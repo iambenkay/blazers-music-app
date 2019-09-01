@@ -50,14 +50,14 @@ function FetchItems() {
          latestSongs: []
      }
      Client.find({})
-        .sort({date: 'descending'})
+        .sort({timeStamp: 'descending'})
         .exec(function(err, docs) {
             if(!err) {
                 Items.latestClients = docs;
                 // resolve(Items)
                 console.log(docs)
                 Music.find({})
-                    .sort({date: 'descending'})
+                    .sort({timeStamp: 'descending'})
                     .limit(10)
                     .exec(function(err, docs) {
                         if(!err) {

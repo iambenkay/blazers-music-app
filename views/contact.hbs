@@ -4,10 +4,10 @@
 <html class="no-js">
 <!--<![endif]-->
 
-<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/videos.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:33 GMT -->
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:48 GMT -->
 <head>
 <meta charset="utf-8">
-<title>BlazersNG</title>
+<title>WeRock</title>
 
 <!--=================================
 Meta tags
@@ -64,7 +64,7 @@ Style Sheets
       <div class="navbar-header">
         <button type="button" class="navbar-toggle fa fa-navicon"></button>
         <a class="navbar-brand" href="index.html">
-            {{!-- <img src="/img/basic/blaze.png" alt="logo" /> --}}
+            <img src="/img/basic/logo.png" class="imgLogo" alt="logo" />
         </a>
       </div>
       <div class="nav_wrapper">
@@ -76,14 +76,14 @@ Style Sheets
             </form>
           </div>
           
-          <ul class="nav navbar-nav">
+           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/event/">Events</a></li>
             <li><a href="/music/page/1">Songs</a></li>
             <li><a href="/client/">Clients</a></li>
             <li><a href="/videos/">Videos</a></li>
             <li><a href="/news/1">News</a></li>
-            <li><a href="/contact" >Contact</a></li>
+            <li><a href="contact.html" >Contact</a></li>
           </ul>
         </div>
         <!--/.nav-collapse --> 
@@ -152,7 +152,7 @@ JPlayer (Audio Player)
             <div class="audio-list-icon"></div>
             <div class="jp-playlist"> 
               <!--Add Songs In mp3 formate here-->
-             <ul class="hidden playlist-files">
+              <ul class="hidden playlist-files">
                   {{#each results.latestSongs as |songs i|}}
                   <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.musicArtist}}"
                     data-mp3="/music/{{songs.musicName}}.mp3"></li>
@@ -174,6 +174,7 @@ JPlayer (Audio Player)
   </div>
 </section>
 
+
 <div id="ajaxArea">
     <div class="pageContentArea">
       <!--=================================
@@ -184,14 +185,14 @@ JPlayer (Audio Player)
              <div class="container">
                   <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6">
-                          <h1>videos</h1>
-                          <h5>latest videos</h5>
+                          <h1>contact</h1>
+                          <h5>contact information</h5>
                       </div>
                       
                       <div class="col-lg-6 col-md-6 col-sm-6">
                           <ul>
-                              <li><a href="">Home</a></li>
-                              <li><a href="/videos/">videos</a></li>
+                              <li><a href="/">Home</a></li>
+                              <li><a href="#">contact</a></li>
                           </ul>
                       </div>
                   </div>
@@ -203,21 +204,58 @@ JPlayer (Audio Player)
       <!--=================================
       videos
       =================================-->
-                 
-      <section id="videos">
+      
+      <section id="contact">
           <div class="container">
               <div class="row">
-                {{#each results.latestVideos as |video i|}}
-                  <div class="col-lg-4 col-md-4 col-sm-4 xs-12"> 
-                      <div class="video-feed video-feed-1">
-                        <img src="/videos/img/{{video.videoThumbnail}}" alt=""/>
-                          <a href="{{video.videoUrl}}" target="_blank"><span class="fa fa-play"></span></a>
-                          <h5>{{video.videoName}}</h5>
-                      </div><!--\\video-feed-->
-                  </div>             
-                  {{/each}}
-              </div>
-          </div>    
+                  <div class="col-lg-9 col-md-9 col-sm-9">
+                      <div id="google-map" class="xv-gmap contact-map" data-theme="pink" data-address="kansas city" data-zoomlvl="13" data-maptype="HYBRID"></div>
+                      <form id="contactform" action="https://xvelopers.com/html/werock2.0/Werock-classic//php/submit.php" method="post">
+                          <div class="row">
+                              <div class="col-lg-5 col-md-5 col-sm-5">
+                                  <h5>Your Name:</h5>
+                                  <input type="text" id="name" />
+                              </div>
+                              <div class="col-lg-5 col-md-5 col-sm-5">
+                                  <h5>Your Email:</h5>
+                                   <input type="text" name="email" id="email" />
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12">
+                                  <h5>Your Message:</h5>
+                                  <textarea name="message" id="message"></textarea>
+                              </div>
+                          </div>
+                          <button id="submit1" type="submit">Submit</button>
+                      </form>
+                      <div id="valid-issue" style="display:none;"> Please Provide Valid Information</div>   
+                  </div>
+                  
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <h3>Head Office</h3>
+                      <p>1814 NE Miami Gardens Drive, 
+      Suite #1007 North Miami Beach, 
+      FL, 33179</p>
+                      <i class="fa fa-mobile-phone"></i>
+                      <p>1.800.987.7890</p>
+                      <b class=" fa fa-envelope"></b>
+                      <p>info@visionmax.com</p>
+                      <div class="booking-info">
+                          <h3>booking</h3>
+                          <i class="fa fa-mobile-phone"></i>
+                          <p>1.800.987.7890</p>
+                          <b class=" fa fa-envelope"></b>
+                          <p>info@visionmax.com</p>
+                      </div>
+                      <h3>manager</h3>
+                      <i class="fa fa-mobile-phone"></i>
+                      <p>1.800.987.7890</p>
+                      <b class=" fa fa-envelope"></b>
+                      <p>info@visionmax.com</p>
+                  </div>
+              </div><!--row-->
+          </div><!--//container-->  
       </section>
 	</div><!--pageContent-->
 </div><!--ajaxwrap-->    
@@ -288,7 +326,7 @@ JPlayer (Audio Player)
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="sitemap">
-             <li><a href="/">HOME</a></li>
+              <li><a href="/">HOME</a></li>
               <li><a href="/music/page/1">Songs</a></li>
               <li><a href="/videos/">Videos</a></li>
               <li><a href="/contact">Contact Us</a></li>
@@ -303,25 +341,12 @@ JPlayer (Audio Player)
           </div>
         </div>
       </div>
-      <!--\\column-->
-      
-      {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
-        <h4><span class="fa fa-twitter"></span>Latest Tweet</h4>
-        <div class="latest-tweet" data-username="envato" data-limit="2"></div>
-      </div> --}}
-      <!--\\column-->
-      
-      {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
-        <h4><span class="fa fa-flickr"></span>Flicker Feed</h4>
-        <ul id="flicker-feed" data-limit="6" data-userID="52617155@N08"></ul>
-      </div> --}}
-      <!--\\column-->
-      
+      <!--\\column-->      
       <div class="col-lg-3 col-md-3 col-sm-3">
         <h4><span class="fa fa-envelope"></span>newsletter signup</h4>
-        <form id="newsletter">
-          <input placeholder="Enter your email address here" />
-          <button class="submit-btn">submit</button>
+        <form id="newsletter" action="/contact/subscribe" method="post">
+          <input placeholder="Enter your email address here" name="email"/>
+          <button>submit</button>
         </form>
       </div>
       <!--\\column--> 
@@ -357,5 +382,5 @@ Script Source
 
 </body>
 
-<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/videos.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:33 GMT -->
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:09:48 GMT -->
 </html>

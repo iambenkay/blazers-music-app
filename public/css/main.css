@@ -18,6 +18,11 @@ a{
 }
 img{
 	max-width:100%;
+	height:270px;
+	width: 100%;
+}
+.imgLogo{
+	max-width:100%;
 	height:auto;
 }
 .home {

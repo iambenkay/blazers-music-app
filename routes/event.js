@@ -50,20 +50,20 @@ function FetchItems() {
          previousEvents: []
      }
      Music.find({})
-     .sort({date: 'descending'})
+     .sort({timeStamp: 'descending'})
      .limit(10)
      .exec(function(err, docs) {
          if(!err) {
              Items.latestSongs = docs;
 
              Event.find({})
-                 .sort({date: 'descending'})
+                 .sort({timeStamp: 'descending'})
                  .limit(4)
                  .exec(function(err, docs) { 
                     if(!err) {
                         Items.latestEvents = docs;
                         // Items.previousEvents = docs.map((x) => {
-                        //     if(moment(docs.timeStamp).isBefore(Time.CurrentTime())) {
+                        //     if(Moment(docs.timeStamp).isBefore(Time.CurrentTime())) {
                         //         return x;
                         //     }
                         // });

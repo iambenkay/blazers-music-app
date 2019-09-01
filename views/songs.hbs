@@ -64,7 +64,7 @@ Style Sheets
       <div class="navbar-header">
         <button type="button" class="navbar-toggle fa fa-navicon"></button>
         <a class="navbar-brand" href="index.html">
-            <img src="/img/basic/logo.png" alt="logo" />
+            <img src="/img/basic/logo.png" class="imgLogo" alt="logo" />
         </a>
       </div>
       <div class="nav_wrapper">
@@ -79,11 +79,11 @@ Style Sheets
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/event/">Events</a></li>
-            <li><a href="/music/">Songs</a></li>
+            <li><a href="/music/page/1">Songs</a></li>
             <li><a href="/client/">Clients</a></li>
             <li><a href="/videos/">Videos</a></li>
             <li><a href="/news/1">News</a></li>
-            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="/contact" >Contact</a></li>
           </ul>
         </div>
         <!--/.nav-collapse --> 
@@ -153,28 +153,11 @@ JPlayer (Audio Player)
             <div class="jp-playlist"> 
               <!--Add Songs In mp3 formate here-->
               <ul class="hidden playlist-files">
-                <li data-title="Maroon 5 - Moves Like Jagger" 
-                                    	data-artist="ft. Christina" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="Coldplay - Princess Of China" 
-                                    	data-artist="ft. Rihanna" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="Lorem Ipsum" 
-                                    	data-artist="ft. Rocker" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="New Fish!!!" 
-                                    	data-artist="ft. Jailer" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="I wanna grow" 
-                                    	data-artist="ft. MeDon" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="do be do" 
-                                    	data-artist="ft. scoby" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                <li data-title="We aint smart" 
-                                    	data-artist="ft. SomeFool" 
-                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-              </ul>
+                  {{#each results.latestSongs as |songs i|}}
+                  <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.musicArtist}}"
+                    data-mp3="/music/{{songs.musicName}}.mp3"></li>
+                  {{/each}}
+                </ul>
               <!--Playlist ends-->
               <h5>Audio Playlist</h5>
               <div class="audio-track">
@@ -206,8 +189,8 @@ JPlayer (Audio Player)
                       
                       <div class="col-lg-6 col-md-6 col-sm-6">
                           <ul>
-                              <li><a href="#">Home</a></li>
-                              <li><a href="#">albums</a></li>
+                              <li><a href="/">Home</a></li>
+                              {{!-- <li><a href="#">albums</a></li> --}}
                           </ul>
                       </div>
                   </div>
@@ -228,103 +211,23 @@ JPlayer (Audio Player)
               </div>
               
               <div class="albums-carousel">
-                  <div class="album">
-                      <img src="/img/albums/1.jpg" alt=""/>
+                  {{#each results.latestSongs as |songs i|}}
+                    <div class="album"> <img src="/music/{{songs.musicThumbnail}}" width="200px" height="200px" />
                       <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/1.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
+                        <ul>
+                          <li id="/music/{{songs.musicName}}.mp3!{{songs.musicName}}!/music/{{songs.musicThumbnail}}" class="playMusic"><a><span
+                                class="fa fa-play"></span></a></li>
+                          {{!-- <li><a href="/music/{{songs.musicThumbnail}}" data-rel="prettyPhoto"><span class="fa fa-play"  ></span></a></li> --}}
+                          <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
+                        </ul>
+                        <h3>{{songs.musicName}}</h3>
+                        {{!-- <h2>Album</h2> --}}
                       </div>
-                  </div><!--\\album-->
+                    </div>
+                    <!--\\album-->
+                    {{/each}}
+
                   
-                  <div class="album">
-                      <img src="/img/albums/2.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/2.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  <div class="album">
-                      <img src="/img/albums/3.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/3.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  <div class="album">
-                      <img src="/img/albums/4.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/4.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  <div class="album">
-                      <img src="/img/albums/5.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/5.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  <div class="album">
-                      <img src="/img/albums/6.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/6.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  
-                  <div class="album">
-                      <img src="/img/albums/7.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/7.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
-                  
-                  
-                  <div class="album">
-                      <img src="/img/albums/8.jpg" alt=""/>
-                      <div class="hover">
-                          <ul>
-                              <li><a href="/img/albums/8.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                          </ul>
-                          <h3>Lorem Artist</h3>
-                          <h2>Album</h2>
-                      </div>
-                  </div><!--\\album-->
                   
               </div>
           </div>
@@ -341,109 +244,52 @@ JPlayer (Audio Player)
                   <h4>recently added</h4>
                   <div class="album-wrapper">
                   
-                      
+                  {{#each results.allSongs as |songs i|}}    
                       <div class="album ">
-                          <img src="/img/albums/9.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/9.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
+                          <img src="/music/{{songs.musicThumbnail}}" alt=""/>
+                           <div class="hover">
+                            <ul>
+                              <li id="/music/{{songs.musicName}}.mp3!{{songs.musicName}}!/music/{{songs.musicThumbnail}}" class="playMusic"><a><span
+                                    class="fa fa-play"></span></a></li>
+                              {{!-- <li><a href="/music/{{songs.musicThumbnail}}" data-rel="prettyPhoto"><span class="fa fa-play"  ></span></a></li> --}}
+                              <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
+                            </ul>
+                            <h3>{{songs.musicName}}</h3>
+                            {{!-- <h2>Album</h2> --}}
                           </div>
+
                       </div><!--\\album-->
-                     
-                      <div class="album ">
-                          <img src="/img/albums/10.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/10.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                      
-                      <div class="album ">
-                          <img src="/img/albums/11.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/11.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                      
-                      
-                     <div class="album ">
-                          <img src="/img/albums/12.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/12.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                  
-                  
-                     <div class="album ">
-                          <img src="/img/albums/13.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/13.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                      
-                      
-                      <div class="album ">
-                          <img src="/img/albums/14.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/14.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                      
-                      
-                      <div class="album ">
-                          <img src="/img/albums/15.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/15.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
-                      
-                      
-                      <div class="album ">
-                          <img src="/img/albums/16.jpg" alt=""/>
-                          <div class="hover">
-                              <ul>
-                                  <li><a href="/img/albums/16.jpg" data-rel="prettyPhoto"><span class="fa fa-search"  ></span></a></li>
-                                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
-                              </ul>
-                              <h3>Lorem Artist</h3>
-                              <h2>Album</h2>
-                          </div>
-                      </div><!--\\album-->
+                  {{/each}}  
                       
                   </div><!--//row-->
+                     <div class="news-feed-btn">
+                            <ul>
+                              {{#paginate pagination type="first"}}
+                              <li><a href="/music/page/{{n}}">First</a></li>
+                              {{/paginate}}
+                              {{#paginate pagination type="previous"}}
+                              <li><a href="/music/page/{{n}}"><b class="fa fa-angle-left"></b></a></li>
+                              {{/paginate}}
+                              {{#paginate pagination type="middle" limit="7"}}
+                              <li><a href="/music/page/{{n}}">{{n}}</a></li>
+                              {{/paginate}}
+                              {{#paginate pagination type="next"}}
+                              <li><a href="/music/page/{{n}}"><b class="fa fa-angle-right"></b></a></li>
+                              {{/paginate}}
+                              {{#paginate pagination type="last"}}
+                              <li><a href="/music/page/{{n}}">Last</a></li>
+                              {{/paginate}}
+                              {{!-- <li><a href="#"><b class="fa fa-angle-left"></b></a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">15</a></li>
+                                            <li><a href="#"><b class="fa fa-angle-right"></b></a></li> --}}
+                            </ul>
+                          </div>  
                   
               </div><!--artist list-->
           </div><!--//container-->  
@@ -518,9 +364,9 @@ JPlayer (Audio Player)
           <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="sitemap">
               <li><a href="/">HOME</a></li>
-              <li><a href="/music/">Songs</a></li>
+              <li><a href="/music/page/1">Songs</a></li>
               <li><a href="/videos/">Videos</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6">

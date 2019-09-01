@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
 const Time = require('../helpers/time');
 const {Video} = require('../models/video');
+const {Music} = require('../models/music');
 const Config = require('../config/config');
 
 const storage = new GrifFsStorage({
@@ -42,14 +43,26 @@ router.get('', (request, response) => {
 function FetchItems() {
     return new Promise((resolve, reject) => {
      let Items = {
-         latestVideos: []
+         latestVideos: [],
+         latestSongs: []
      }
      Video.find({})
         .sort({date: 'descending'})
         .exec(function(err, docs) {
             if(!err) {
                 Items.latestVideos = docs;
-                resolve(Items)
+                // resolve(Items)
+                Music.find({})
+                .sort({timeStamp: 'descending'})
+                .limit(10)
+                .exec(function(err, docs) {
+                    if(!err) {
+                        Items.latestSongs = docs;
+                        resolve(Items);
+                    } else {
+                        reject(err);
+                    }
+                });
                } else {
                    reject(err);
                }

@@ -64,7 +64,7 @@ Style Sheets
       <div class="navbar-header">
         <button type="button" class="navbar-toggle fa fa-navicon"></button>
         <a class="navbar-brand" href="index.html">
-            <img src="/img/basic/logo.png" alt="logo" />
+            <img src="/img/basic/logo.png" class="imgLogo" alt="logo" />
         </a>
       </div>
       <div class="nav_wrapper">
@@ -79,11 +79,11 @@ Style Sheets
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/event/">Events</a></li>
-            <li><a href="/music/">Songs</a></li>
+            <li><a href="/music/page/1">Songs</a></li>
             <li><a href="/client/">Clients</a></li>
             <li><a href="/videos/">Videos</a></li>
             <li><a href="/news/1">News</a></li>
-            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="/contact" >Contact</a></li>
           </ul>
         </div>
         <!--/.nav-collapse --> 
@@ -154,7 +154,7 @@ JPlayer (Audio Player)
               <!--Add Songs In mp3 formate here-->
               <ul class="hidden playlist-files">
                   {{#each results.latestSongs as |songs i|}}
-                  <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.MusicArtist}}"
+                  <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.musicArtist}}"
                     data-mp3="/music/{{songs.musicName}}.mp3"></li>
                   {{/each}}
                   </ul>
@@ -235,7 +235,7 @@ JPlayer (Audio Player)
       Previous Events
       =================================-->
       
-      <section id="previous-events">
+      {{!-- <section id="previous-events">
           <div class="container">
               <h1>Previous events</h1>
               <div class="row">
@@ -277,7 +277,7 @@ JPlayer (Audio Player)
               </div><!--row-->
               <div class="clearfix"></div>
           </div><!--//container-->  
-      </section>
+      </section> --}}
 	</div><!--pageContent-->
 </div><!--ajaxwrap-->    
 <!--=================================
@@ -348,9 +348,9 @@ JPlayer (Audio Player)
           <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="sitemap">
               <li><a href="/">HOME</a></li>
-              <li><a href="/music/">Songs</a></li>
+              <li><a href="/music/page/1">Songs</a></li>
               <li><a href="/videos/">Videos</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6">

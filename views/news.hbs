@@ -66,7 +66,7 @@ Style Sheets
         <div class="navbar-header">
           <button type="button" class="navbar-toggle fa fa-navicon"></button>
           <a class="navbar-brand" href="index.html">
-            <img src="/img/basic/logo.png" alt="logo" />
+            <img src="/img/basic/logo.png" class="imgLogo" alt="logo" />
           </a>
         </div>
         <div class="nav_wrapper">
@@ -81,11 +81,11 @@ Style Sheets
             <ul class="nav navbar-nav">
               <li><a href="/">Home</a></li>
               <li><a href="/event/">Events</a></li>
-              <li><a href="/music/">Songs</a></li>
+              <li><a href="/music/page/1">Songs</a></li>
               <li><a href="/client/">Clients</a></li>
               <li><a href="/videos/">Videos</a></li>
               <li><a href="/news/1">News</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -157,20 +157,10 @@ JPlayer (Audio Player)
               <div class="jp-playlist">
                 <!--Add Songs In mp3 formate here-->
                 <ul class="hidden playlist-files">
-                  <li data-title="Maroon 5 - Moves Like Jagger" data-artist="ft. Christina"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="Coldplay - Princess Of China" data-artist="ft. Rihanna"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="Lorem Ipsum" data-artist="ft. Rocker"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="New Fish!!!" data-artist="ft. Jailer"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="I wanna grow" data-artist="ft. MeDon"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="do be do" data-artist="ft. scoby"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
-                  <li data-title="We aint smart" data-artist="ft. SomeFool"
-                    data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                  {{#each results.latestSongs as |songs i|}}
+                  <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.musicArtist}}"
+                    data-mp3="/music/{{songs.musicName}}.mp3"></li>
+                  {{/each}}
                 </ul>
                 <!--Playlist ends-->
                 <h5>Audio Playlist</h5>
@@ -382,9 +372,9 @@ JPlayer (Audio Player)
             <div class="col-lg-6 col-md-6 col-sm-6">
               <ul class="sitemap">
                 <li><a href="/">HOME</a></li>
-                <li><a href="/music/">Songs</a></li>
+                <li><a href="/music/page/1">Songs</a></li>
                 <li><a href="/videos/">Videos</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
               </ul>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">

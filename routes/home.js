@@ -62,14 +62,14 @@ function FetchItems() {
                 Items.latestSongs = docs;
 
                 Event.find({})
-                    .sort({date: 'descending'})
+                    .sort({timeStamp: 'descending'})
                     .limit(4)
                     .exec(function(err, docs) { 
                         if(!err) {
                             Items.latestEvents = docs;
 
                             News.find({})
-                                .sort({date: 'descending'})
+                                .sort({timeStamp: 'descending'})
                                 .limit(4)
                                 .exec(function(err, docs) { 
                                     if(!err) {
@@ -81,7 +81,7 @@ function FetchItems() {
                                         Items.latestNews = docs;
 
                                         Video.find({})
-                                            .sort({date: 'descending'})
+                                            .sort({timeStamp: 'descending'})
                                             .limit(3)
                                             .exec(function(err, docs) { 
                                                if(!err) {

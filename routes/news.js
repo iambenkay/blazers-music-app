@@ -11,6 +11,7 @@ const Moment = require('moment');
 const {News} = require('../models/news');
 const {Event} = require('../models/event');
 const {Video} = require('../models/video')
+const {Music} = require('../models/music');
 const Config = require('../config/config');
 var {ObjectID} = require('mongodb');
 
@@ -93,7 +94,18 @@ function FetchItems() {
                                 .exec(function(err, docs) {
                                     if(!err) {
                                         Items.latestVideos = docs;
-                                        resolve(Items);
+
+                                        Music.find({})
+                                        .sort({timeStamp: 'descending'})
+                                        .limit(10)
+                                        .exec(function(err, docs) {
+                                            if(!err) {
+                                                Items.latestSongs = docs;
+                                                resolve(Items);
+                                            } else {
+                                                reject(err);
+                                            }
+                                        });
 
                                     } else {
                                         reject(err);

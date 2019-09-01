@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:06:15 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <title>BlazersNG</title>
+
+  <!--=================================
+Meta tags
+=================================-->
+  <meta name="description" content="">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+
+  <!--=================================
+Style Sheets
+=================================-->
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/css/prettyPhoto.css">
+  <link rel="stylesheet" type="text/css" href="/css/jquery.vegas.css">
+  <link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!--<link rel="stylesheet" type="text/css" href="/css/blue.css">
+<link rel="stylesheet" type="text/css" href="/css/orange.css">
+<link rel="stylesheet" type="text/css" href="/css/red.css">
+<link rel="stylesheet" type="text/css" href="/css/green.css">
+<link rel="stylesheet" type="text/css" href="/css/purple.css">-->
+
+  <script async src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script  src="/js/jquery.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <!--=================================
+	Header
+	=================================-->
+  <header>
+    <div class="social-links">
+      <div class="container">
+        <ul class="social">
+          <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+          <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+          <li><a href="#"><span class="fa fa-flickr"></span></a></li>
+          <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar yamm navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle fa fa-navicon"></button>
+          <a class="navbar-brand" href="index.html">
+            <img src="/img/basic/logo.png" class="imgLogo" alt="logo" />
+          </a>
+        </div>
+        <div class="nav_wrapper">
+          <div class="nav_scroll">
+            <div class="nav-search">
+              <form>
+                <input type="text" placeholder="Search" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/event/">Events</a></li>
+              <li><a href="/music/page/1">Songs</a></li>
+              <li><a href="/client/">Clients</a></li>
+              <li><a href="/videos/">Videos</a></li>
+              <li><a href="/news/1">News</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--=================================
+Vegas Slider Images
+=================================-->
+
+  <ul class="vegas-slides hidden">
+    <li><img data-fade='2000' src="/img/BG/bg1.jpg" alt="" /></li>
+    <li><img data-fade='2000' src="/img/BG/bg2.jpg" alt="" /></li>
+    <li><img data-fade='2000' src="/img/BG/bg3.jpg" alt="" /></li>
+    <li><img data-fade='2000' src="/img/BG/bg4.jpg" alt="" /></li>
+  </ul>
+
+  <!--=================================
+JPlayer (Audio Player)
+=================================-->
+
+  <section id="audio-player">
+    <div class="container">
+      <div class="rock-player">
+        <div class="playListTrigger">
+          <a href="#"><i class="fa fa-list"></i></a>
+        </div>
+        <!--triggerPlayList in responsive-->
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div id="player-instance" class="jp-jplayer"></div>
+                <div class="controls">
+                  <div class="jp-prev"></div>
+                  <div class="play-pause jp-play"></div>
+                  <div class="play-pause jp-pause" style="display:none"></div>
+                  <div class="jp-next"></div>
+                </div>
+                <!--controls-->
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                <div class="player-status">
+                  <h5 class="audio-title" id="audio-title-Paste"></h5>
+                  <div class="audio-timer"><span class="current-time jp-current-time">01:02</span> / <span
+                      class="total-time jp-duration">4:05</span></div>
+                  <div class="audio-progress">
+                    <div class="jp-seek-bar">
+                      <div class="audio-play-bar jp-play-bar" style="width:20%;"></div>
+                    </div>
+                    <!--jp-seek-bar-->
+                  </div>
+                  <!--audio-progress-->
+                </div>
+                <!--player-status-->
+              </div>
+              <!--column-->
+            </div>
+            <!--inner-row-->
+          </div>
+          <!--column-->
+
+          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <div class="audio-list">
+              <div class="audio-list-icon"></div>
+              <div class="jp-playlist">
+                <!--Add Songs In mp3 formate here-->
+
+                <ul class="hidden playlist-files">
+                  {{#each results.latestSongs as |songs i|}}
+                  <li data-title="{{songs.musicName}}" data-artist="ft. {{songs.musicArtist}}"
+                    data-mp3="/music/{{songs.musicName}}.mp3"></li>
+                  {{/each}}
+                </ul>
+                {{!-- <ul class="hidden playlist-files">
+                <li data-title="Maroon 5 - Moves Like Jagger" 
+                                    	data-artist="ft. Christina" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="Coldplay - Princess Of China" 
+                                    	data-artist="ft. Rihanna" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="Lorem Ipsum" 
+                                    	data-artist="ft. Rocker" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="New Fish!!!" 
+                                    	data-artist="ft. Jailer" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="I wanna grow" 
+                                    	data-artist="ft. MeDon" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="do be do" 
+                                    	data-artist="ft. scoby" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+                <li data-title="We aint smart" 
+                                    	data-artist="ft. SomeFool" 
+                                        data-mp3="http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"></li>
+              </ul> --}}
+                <!--Playlist ends-->
+                <h5>Audio Playlist</h5>
+                <div class="audio-track">
+                  <ul>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row-->
+      </div>
+    </div>
+  </section>
+
+
+  <div id="ajaxArea">
+    <div class="pageContentArea">
+      <!--=================================
+      Home
+      =================================-->
+      <section id="home-slider">
+        <div class="container">
+          <div class="home-inner">
+
+            <div id="homeSliderNav" class="slider-nav">
+              <a id="home-prev" href="#" class="prev fa fa-chevron-left"></a>
+              <a id="home-next" href="#" class="next fa fa-chevron-right"></a>
+            </div>
+            <!--sliderNav-->
+
+            <div id="flex-home" class="flexslider" data-animation="slide" data-animationSpeed="1000"
+              data-autoPlay="true" data-slideshowSpeed="7000">
+              <ul class="slides">
+                <li> <img src="/img/slider/slider.jpg" alt="">
+                  <div class="flex-caption">
+                    <h2>Premium music events theme</h2>
+                  </div>
+                </li>
+                <li> <img src="/img/slider/slider-1.jpg" alt="">
+                  <div class="flex-caption">
+                    <h2>Premium music events theme</h2>
+                  </div>
+                </li>
+                <li> <img src="/img/slider/slider-2.jpg" alt="">
+                  <div class="flex-caption">
+                    <h2>Premium music events theme</h2>
+                  </div>
+                </li>
+                <li> <img src="/img/slider/slider-3.jpg" alt="">
+                  <div class="flex-caption">
+                    <h2>Premium music events theme</h2>
+                  </div>
+                </li>
+                <li> <img src="/img/slider/slider-4.jpg" alt="">
+                  <div class="flex-caption">
+                    <h2>Premium music events theme</h2>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=================================
+      Player Wraper
+      =================================-->
+      <div class="rockPlayerHolder"></div>
+      <!--=================================
+      Latest Albumbs
+      =================================-->
+
+      <section id="albums">
+        <div class="container">
+          <h1>Music results</h1>
+          <div class="top-carouselnav"> <a href="#" class="prev-album"><span class="fa fa-caret-left"></span></a> <a
+              href="#" class="next-album"><span class="fa fa-caret-right"></span></a> </div>
+          <div class="albums-carousel">
+            {{#each results.latestSongs as |songs i|}}
+            <div class="album"> <img src="/music/{{songs.musicThumbnail}}" width="200px" height="200px" />
+              <div class="hover">
+                <ul>
+                  <li id="/music/{{songs.musicName}}.mp3!{{songs.musicName}}!/music/{{songs.musicThumbnail}}" class="playMusic"><a><span
+                        class="fa fa-play"></span></a></li>
+                  {{!-- <li><a href="/music/{{songs.musicThumbnail}}" data-rel="prettyPhoto"><span class="fa fa-play"  ></span></a></li> --}}
+                  <li><a href="album-detail.html"><span class="fa fa-link"></span></a></li>
+                </ul>
+                <h3>{{songs.musicName}}</h3>
+                {{!-- <h2>Album</h2> --}}
+              </div>
+            </div>
+            <!--\\album-->
+            {{/each}}
+
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+
+    <section id="albums">
+        <div class="container">
+          <h1>Video results</h1>
+          <div class="top-carouselnav"> <a href="#" class="prev-album"><span class="fa fa-caret-left"></span></a> <a
+              href="#" class="next-album"><span class="fa fa-caret-right"></span></a> </div>
+          <div class="albums-carousel">
+            {{#each results.latestVideos as |video i|}}
+                <div class="col-lg-4 col-md-4 col-sm-4 xs-12"> 
+                      <div class="video-feed video-feed-1">
+                        <img src="/videos/img/{{video.videoThumbnail}}" alt=""/>
+                          <a href="{{video.videoUrl}}" target="_blank"><span class="fa fa-play"></span></a>
+                          <h5>{{video.videoName}}</h5>
+                      </div><!--\\video-feed-->
+                  </div>   
+            <!--\\album-->
+            {{/each}}
+
+          </div>
+        </div>
+      </section>
+
+    <section id="albums">
+        <div class="container">
+          <h1>Event results</h1>
+          <div class="top-carouselnav"> <a href="#" class="prev-album"><span class="fa fa-caret-left"></span></a> <a
+              href="#" class="next-album"><span class="fa fa-caret-right"></span></a> </div>
+          <div class="albums-carousel">
+
+            {{#each results.latestEvents as |events i|}}
+                     <div class="col-lg-4 col-md-4 col-sm-6">
+                          <div class="event-feed latest">
+                              <img src="img/{{events.eventThumbnail}}" alt="">
+                              <div class="date">
+                                  <span class="day">{{events.eventDay}}</span>
+                                  <span class="month">{{events.eventMonth}}</span>
+                              </div>
+                              <h5><a href="event-detail.html">{{events.eventName}}</a></h5>
+                              <ul>
+                                  <li><b class=" fa fa-location-arrow"></b> at {{events.eventVenue}}</li>
+                                  <li><b class=" fa fa-clock-o"></b> {{events.eventStartTime}} - {{events.eventStopTime}}</li>
+                                  
+                              </ul>
+                              <a class="btn" href="{{events.eventUrl}}" target="_blank">View Event</a>
+                          </div><!--\\event-feed latest-->
+                      </div>
+            {{/each}}
+
+          </div>
+        </div>
+      </section>
+
+    <section id="albums">
+        <div class="container">
+          <h1>News results</h1>
+          <div class="top-carouselnav"> <a href="#" class="prev-album"><span class="fa fa-caret-left"></span></a> <a
+              href="#" class="next-album"><span class="fa fa-caret-right"></span></a> </div>
+          <div class="albums-carousel">
+            {{#each results.latestNews as |news i|}}
+            <div class="news-feed">
+                  <img src="/news/img/{{news.newsThumbnail}}" alt="dummy">
+                  <h2><a href="#">{{news.newsTitle}}</a></h2>
+                  <ul>
+                    <li>{{news.momentTime}}</li>
+                    <li><span class="fa fa-comment"></span></li>
+                  </ul>
+                  <p>{{news.newsMessage}}
+                  </p>
+                </div>
+            <!--\\album-->
+            {{/each}}
+
+          </div>
+        </div>
+      </section>   
+      <!--=================================
+      Upcoming events
+      =================================-->
+{{!-- 
+      <section id="updates">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <h1>Upcoming events</h1>
+              {{#each results.latestEvents as |event i|}}
+              <div class="event-feed">
+                <div class="date"> <span class="day">{{event.eventDay}}</span> <span
+                    class="month">{{event.eventMonth}}</span> </div>
+                <h5>{{event.eventName}}</h5>
+                <p>{{event.eventVenue}}</p>
+                <a class="btn" href="#">View Details</a>
+              </div>
+              <!--\\event-->
+              {{/each}}
+              <!--\\event-->
+
+            </div>
+            <!--latest events-->
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <h1>latest news</h1>
+              {{#each results.latestNews as |news i|}}
+              <div class="news-feed"> <img src="/news/img/{{news.newsThumbnail}}" alt="dummy"> <a
+                  href="#">{{news.newsTitle}}</a>
+                <ul>
+                  <li>{{news.momentTime}}</li>
+                </ul>
+                <p>{{news.newsMessage}}.</p>
+              </div>
+              {{/each}}
+              <!--\\latest news-->
+
+            </div>
+            <!--latest news-->
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <h1>latest videos</h1>
+              {{#each results.latestVideos as |videos i|}}
+              <div class="video-feed"> <img src="/videos/img/{{videos.videoThumbnail}}" alt="" /> <a
+                  href="{{videos.videoUrl}}" target="_blank"><span class="fa fa-play"></span></a>
+                <h6>{{videos.momentTime}}</h6>
+              </div>
+              {{/each}}
+              <!--\\video-feed-->
+            </div>
+            <!--latest videos-->
+          </div>
+        </div>
+      </section> --}}
+    </div>
+    <!--pageContent-->
+  </div>
+  <!--ajaxwrap-->
+  <!--=================================
+	Latest blog
+	=================================-->
+
+  <!--=================================
+	Footer
+	=================================-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <h4><span class="fa fa-sitemap"></span>browse around</h4>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <ul class="sitemap">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/music/page/1">Songs</a></li>
+                <li><a href="/videos/">Videos</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <ul class="sitemap">
+                <li><a href="/event/">Events</a></li>
+                <li><a href="/client/">Clients</a></li>
+                <li><a href="/news/1">News</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--\\column-->
+
+        {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-twitter"></span>Latest Tweet</h4>
+        <div class="latest-tweet" data-username="envato" data-limit="2"></div>
+      </div> --}}
+        <!--\\column-->
+
+        {{!-- <div class="col-lg-3 col-md-3 col-sm-3">
+        <h4><span class="fa fa-flickr"></span>Flicker Feed</h4>
+        <ul id="flicker-feed" data-limit="6" data-userID="52617155@N08"></ul>
+      </div> --}}
+        <!--\\column-->
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <h4><span class="fa fa-envelope"></span>newsletter signup</h4>
+          <form id="newsletter">
+            <input placeholder="Enter your email address here" />
+            <button class="submit-btn">submit</button>
+          </form>
+        </div>
+        <!--\\column-->
+
+      </div>
+      <!--\\row-->
+    </div>
+    <!--\\container-->
+  </footer>
+
+  <!--=================================
+Script Source
+=================================-->
+
+  <script  src="/js/bootstrap.min.js"></script>
+  <script  src="/js/jquery.easing-1.3.pack.js"></script>
+  <script  src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script  src="/js/jquery.mousewheel.min.js"></script>
+  <script  src="/js/jflickrfeed.min.js"></script>
+  <script  src="/js/jquery.flexslider-min.js"></script>
+  <script  src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+  <script  src="/js/tweetie.min.js"></script>
+  <script  src="/js/jquery.prettyPhoto.js"></script>
+  <script  src="/jPlayer/jquery.jplayer.min.js"></script>
+  <script  src="/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script  src="/js/jquery.vegas.min.js"></script>
+  <script  src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script  src="/js/jquery.calendar-widget.js"></script>
+  <script  src="/js/isotope.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+  </script>
+
+  <script>/*Place Your Google Analytics code here*/</script>
+
+</body>
+
+<!-- Mirrored from xvelopers.com/html/werock2.0/Werock-classic/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jul 2019 14:06:15 GMT -->
+
+</html>

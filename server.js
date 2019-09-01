@@ -15,6 +15,7 @@ var event = require('./routes/event');
 var news = require('./routes/news');
 var videos = require('./routes/videos');
 var home = require('./routes/home');
+var contact = require('./routes/contact');
 
 //express Instance declaration
 const app = express();
@@ -54,6 +55,7 @@ app.use('/client', client);
 app.use('/event', event);
 app.use('/news', news);
 app.use('/videos', videos);
+app.use('/contact', contact);
 app.use('', home);
  
 // var relativeTime = moment('2019-08-15T18:05:06+01:00').fromNow();
