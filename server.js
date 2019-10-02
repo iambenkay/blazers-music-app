@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const passport = require('passport');
 const moment = require('moment');
-// const exphbs  = require('express-handlebars');
+const cors = require("cors")
 const paginate = require('handlebars-paginate')
 const Handlebars = require('hbs')
 
@@ -20,6 +20,7 @@ var contact = require('./routes/contact');
 //express Instance declaration
 const app = express();
 
+app.use(cors())
 //local configuration file
 const config = require('./config/config');
 
@@ -48,8 +49,6 @@ Handlebars.registerHelper('paginate', paginate);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.use('/music', music);
 app.use('/client', client);
 app.use('/event', event);
@@ -57,7 +56,7 @@ app.use('/news', news);
 app.use('/videos', videos);
 app.use('/contact', contact);
 app.use('', home);
- 
+
 // var relativeTime = moment('2019-08-15T18:05:06+01:00').fromNow();
 // console.log("nw",relativeTime)
 
