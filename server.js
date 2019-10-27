@@ -16,6 +16,8 @@ var news = require('./routes/news');
 var videos = require('./routes/videos');
 var home = require('./routes/home');
 var contact = require('./routes/contact');
+var jwt = require('jsonwebtoken')
+
 
 //express Instance declaration
 const app = express();
@@ -29,7 +31,8 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true,
 }).then(() => {
     console.log('Database is connected and running');
 }).catch((e) => {
@@ -48,6 +51,23 @@ app.set('view engine', 'hbs');
 Handlebars.registerHelper('paginate', paginate);
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'upload')));
+
+app.get('/upload', (req, res) => {
+    res.sendFile(path.join(__dirname, 'upload', 'upload.html'))
+})
+
+app.post('/api/login', (req, res) => {
+    const {email, password} = req.body
+
+    if (!email || !password) return res.status(400).send({error: "must provide email and password"})
+
+    if(email !== 'root@blazers.com' || password !== 'BlAzErSrOoT') return res.status(401).send({error: "Invalid email or password"})
+
+    const token = jwt.sign({authorized: true}, "supersecretauthenticationstring")
+
+    res.send({token, success: "Login was successful"})
+})
 
 app.use('/music', music);
 app.use('/client', client);

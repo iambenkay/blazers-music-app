@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const {isAuthenticated} = require('./')
 const multer = require('multer');
 const GrifFsStorage = require('multer-gridfs-storage');
 const GridFsStream = require('gridfs-stream');
@@ -70,7 +71,7 @@ function FetchItems() {
  })
 }
 
-router.post('/add',  upload.single('file'), (request, response) => {
+router.post('/add', isAuthenticated, upload.single('file'), (request, response) => {
     var video = new Video({
         videoThumbnail: request.file.filename,
         videoThumbnailId: request.file.id,
