@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'upload')));
 
 app.get('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, 'upload', 'index.html'))
+    res.sendFile(path.join(__dirname, 'upload', 'upload.html'))
 })
 
 app.post('/api/login', (req, res) => {
