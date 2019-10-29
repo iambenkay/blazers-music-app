@@ -76,12 +76,11 @@ function FetchItems() {
             })
  })
 }
-// 08096038027
 
 router.post('/add',  upload.single('file'), (request, response) => {
     var event = new Event({
-        eventThumbnail: request.files[0].filename,
-        eventThumbnailId: request.files[0].id,
+        eventThumbnail: request.file.filename,
+        eventThumbnailId: request.file.id,
         eventName: request.body.eventName,
         eventTime: request.body.eventTime,
         eventType: request.body.eventType,
